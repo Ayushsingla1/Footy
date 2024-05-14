@@ -7,6 +7,7 @@ import ContactPage from './Pages/ContactPage';
 import Outlet1 from './Pages/Outlet1';
 import NotFoundPage from './Pages/NotFoundPage';
 import SecondaryNav from './Components/SecondaryNav';
+import Table from './Pages/PointsTablePage';
 
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
         <Route path='/' element={<Outlet1/>}>
           <Route index element={<HomePage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
+          <Route path="/pointsTable/:pointTable" element={<Table/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Route>
-
       </Routes>
 
       <ToastContainer/>
