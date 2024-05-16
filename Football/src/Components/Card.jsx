@@ -1,11 +1,16 @@
+import { useState } from "react";
 
 function Card({item,index}){
     return(
         <div className="flex justify-center mt-4"> 
-            <div className="flex justify-between gap-3 w-[902px] h-[51px] bg-siu ">
-                <div className="flex gap-20 items-center">
-                    <div className="flex justify-center w-[20px] items-center">{index+1}</div>
-                    <div className="flex w-[100px] items-center">{item.standing_team}</div>
+            <div className="flex justify-between gap-3 w-[902px] h-[51px] bg-siu rounded">
+                <div className="flex gap-10 items-center px-5">
+                    <div className="flex gap-x-6">
+                        <div className="flex justify-center w-[20px] items-center">{index+1}</div>
+                        <div className="border border-white w-0 h-[25px] rounded"></div>
+                    </div>
+                    <div><img className="h-[30px]" src={item.team_logo}/></div>
+                    <div className="flex text-white font-extrabold items-center">{item.standing_team}</div>
                 </div>
 
                 <div className="flex justify-between gap-7 mr-3 items-center">
