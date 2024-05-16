@@ -7,8 +7,9 @@ import ContactPage from './Pages/ContactPage';
 import Outlet1 from './Pages/Outlet1';
 import NotFoundPage from './Pages/NotFoundPage';
 import SecondaryNav from './Components/SecondaryNav';
-import Table from './Pages/PointsTablePage';
-import Format from './Pages/Format';
+import PointsTablePage from './Pages/PointsTablePage';
+import TableFormat from './Pages/TableFormat';
+import LiveFormat from './Pages/LiveFormat';
 function App() {
   return (
     <div className='w-full h-screen bg-[#1E1E1E]'>
@@ -20,8 +21,9 @@ function App() {
         <Route path='/' element={<Outlet1/>}>
           <Route index element={<HomePage/>}/>
           <Route path="/contact" element={<ContactPage/>}/>
-          <Route exact path="/pointsTable" element={<Format/>}/>
-          <Route path="/pointsTable/:pointTable" element={<Table/>}/>
+          <Route exact path="/pointsTable" element={<TableFormat/>}/>
+          <Route path="/pointsTable/:pointTable" element={<PointsTablePage/>}/>
+          <Route path='/liveScores' element={<LiveFormat/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Route>
       </Routes>

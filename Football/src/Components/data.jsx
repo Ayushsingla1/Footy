@@ -32,3 +32,14 @@ export const obj = [
         "Logo"  : "https://imgs.search.brave.com/dq7i5Ev5YgN9KePOGUOiyjXYnxtaduOQRjn1EcBHLW4/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/bW9zLmNtcy5mdXR1/cmVjZG4ubmV0L1lm/Y0xGUWhqSDNkQmhB/MnRHcXM4UWYtMzIw/LTgwLmpwZw"
     }
 ]
+
+export const mainLeagues = [
+    {"UEFA Champions League": 3},
+    {"UEFA Europa League": 4},
+    {"Premier League": 152},
+    {"Ligue 1": 168},,
+    {"Serie A": 207},
+    {"La liga": 302}
+]
+
+export const mainLeaguesArray = [3, 4, 152, 168, 207, 302, 356, 216, 46, 274];
