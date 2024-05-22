@@ -5,7 +5,6 @@ import Spinner from "../Components/Spinner";
 
 const FixturePage = () => {
     const [loading, setLoading] = useState(false);
-    const [, setUpcoming] = useState([]);
     const [availableLiveLeagues, setAvailableLiveLeagues] = useState([]);
     const baseUrl = `https://apiv2.allsportsapi.com/football/`
     const apiKey = `a3e30b88137690edc2270cabb012c0400f8585227e222b3a6fe83764060c598d`;
@@ -29,7 +28,7 @@ const FixturePage = () => {
     
             } catch (error) {
                 console.log('fetchLiveLeages unsuccessful')
-                setUpcoming([]);
+                setAvailableLiveLeagues([]);
             }
             setLoading(false);
         }

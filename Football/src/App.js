@@ -12,7 +12,12 @@ import TableFormat from './Pages/TableFormat';
 import LiveFormat from './Pages/LiveFormat';
 import FixturePage from './Pages/FixturesPage';
 import Stats from './Pages/Stats';
+import PastMatches from './Pages/PastMatches';
+import { useState } from 'react';
+import PastMatchesCards from './Components/PastMatchCards'
 function App() {
+
+
   return (
     <div className='w-full h-screen bg-[#1E1E1E]'>
       <MainNav/>
@@ -27,7 +32,9 @@ function App() {
           <Route path="/pointsTable/:pointTable" element={<PointsTablePage/>}/>
           <Route path='/liveScores' element={<LiveFormat/>}/>
           <Route path='/fixtures' element ={<FixturePage/>}/>
-          <Route path="//LiveStats/:id" element={<Stats/>}/>
+          <Route path="/LiveStats/:id" element={<Stats/>}/>
+          <Route path='/pastMatches' element={<PastMatches/>}/>
+          <Route path='/pastMatches/:id' element={<PastMatchesCards/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Route>
       </Routes>
