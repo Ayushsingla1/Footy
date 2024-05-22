@@ -10,6 +10,8 @@ import SecondaryNav from './Components/SecondaryNav';
 import PointsTablePage from './Pages/PointsTablePage';
 import TableFormat from './Pages/TableFormat';
 import LiveFormat from './Pages/LiveFormat';
+import FixturePage from './Pages/FixturesPage';
+import Stats from './Pages/Stats';
 function App() {
   return (
     <div className='w-full h-screen bg-[#1E1E1E]'>
@@ -24,6 +26,8 @@ function App() {
           <Route exact path="/pointsTable" element={<TableFormat/>}/>
           <Route path="/pointsTable/:pointTable" element={<PointsTablePage/>}/>
           <Route path='/liveScores' element={<LiveFormat/>}/>
+          <Route path='/fixtures' element ={<FixturePage/>}/>
+          <Route path="//LiveStats/:id" element={<Stats/>}/>
           <Route path='*' element={<NotFoundPage/>}/>
         </Route>
       </Routes>

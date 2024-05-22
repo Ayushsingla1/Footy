@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 function Card({item,index}){
     return(
@@ -9,7 +8,7 @@ function Card({item,index}){
                         <div className="flex justify-center w-[20px] items-center">{index+1}</div>
                         <div className="border border-white w-0 h-[25px] rounded"></div>
                     </div>
-                    <div><img className="h-[30px]" src={item.team_logo}/></div>
+                    <div><img className="h-[30px]" src={item.team_logo} alt="Error"/></div>
                     <div className="flex text-white font-extrabold items-center">{item.standing_team}</div>
                 </div>
 

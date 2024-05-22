@@ -13,15 +13,16 @@ function PointsTablePage(){
     const apiKey =`a3e30b88137690edc2270cabb012c0400f8585227e222b3a6fe83764060c598d`
     const apiUrl =  `https://apiv2.allsportsapi.com/football/?&met=Standings`
     
-    async function fetchtable(){
-        setloading(true);
-        console.log(apiUrl+`&leagueId=${location.pathname.split('/').at(-1)}&APIkey=${apiKey}`);
-        const data = await fetch(apiUrl+`&leagueId=${location.pathname.split('/').at(-1)}&APIkey=${apiKey}`);
-        const finaldata = await data.json();
-        setdata(finaldata.result.total);
-        setloading(false);
-    }
+
     useEffect(()=>{
+        async function fetchtable(){
+            setloading(true);
+            console.log(apiUrl+`&leagueId=${location.pathname.split('/').at(-1)}&APIkey=${apiKey}`);
+            const data = await fetch(apiUrl+`&leagueId=${location.pathname.split('/').at(-1)}&APIkey=${apiKey}`);
+            const finaldata = await data.json();
+            setdata(finaldata.result.total);
+            setloading(false);
+        }
         fetchtable();
     },[apiKey,apiUrl,location.pathname]);
     console.log(data);

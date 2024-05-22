@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 
-const LiveCard = ({match}) => {
+
+const FixtureCard = ({match})=>{
     return ( 
         <div className="w-full flex justify-center items-center">
             <div className="flex items-center justify-between bg-[#373737] w-10/12 p-[10px] rounded-md">
@@ -9,14 +9,15 @@ const LiveCard = ({match}) => {
                 </div>
                 <div className="flex flex-col items-center justify-center gap-y-4 w-8/12">
                     <div className="flex gap-x-[10px]">
-                        <span className=" text-center uppercase font-bold text-3xl text-red-600"><Link to={`/LiveStats/${match.event_key}`}>{match.event_home_team}</Link></span>
-                        <span className=" text-center font-bold text-3xl"><Link to={`/LiveStats/${match.event_key}`}>VS</Link></span>
-                        <span className=" text-center uppercase font-bold text-3xl text-blue-600"><Link to={`/LiveStats/${match.event_key}`}>{match.event_away_team}</Link></span>
+                        <span className=" text-center uppercase font-bold text-3xl text-red-600">{match.event_home_team}</span>
+                        <span className=" text-center font-bold text-3xl">VS</span>
+                        <span className=" text-center uppercase font-bold text-3xl text-blue-600">{match.event_away_team}</span>
                     </div>
                     <div>
                         <span>Match No</span>
-                        
                     </div>
+                    <div>{match.event_date}</div>
+                    <div>{match.event_time}</div>
                     <div className="uppercase font-bold text-2xl">
                         <span>{match.league_name}</span>
                     </div>
@@ -29,5 +30,5 @@ const LiveCard = ({match}) => {
         </div>
      );
 }
- 
-export default LiveCard;
+
+export default FixtureCard;
